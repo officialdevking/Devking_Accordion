@@ -1,13 +1,94 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #4b145b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Container */
+.container {
+  background-color: #ffffff;
+  display: flex;
+  margin: 5rem auto;
+  width: 65%;
+  color: #102a42;
+  padding: 2rem 2rem;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
+}
+
+/* Questions And Answers About Login */
+.title {
+  width: 30%;
+  margin-top: 0.9rem;
+}
+
+/* Questions */
+.body {
+  width: 70%;
+}
+
+.header {
+  padding: 0.18rem 2rem;
+  margin: 1rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.1rem;
+  color: #102a42;
+  border: 2px solid #eae6eb;
+  border-radius: 5px;
+}
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+p {
+  color: #324d67;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+
+/* Button */
+button {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+  border: none;
+  background-color: #eae6eb;
+  color: #b4345c;
+  cursor: pointer;
+  outline: 0;
+}
+
+/* Additional empty Question */
+section:nth-child(6) {
+  display: none;
+}
+
+/* Mediaquery */
+@media screen and (max-width: 1200px) {
+  .container{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 990px) {
+  .container{
+    flex-direction: column;
+  }
+  .title{
+    width: 100%;
+  }
+  .body{
+    width: 100%;
+  }
 }
